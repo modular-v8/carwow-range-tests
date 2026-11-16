@@ -1,0 +1,57 @@
+# Local history and research; keep the directory explanations.
+/research/*
+!/research/README.md
+Post Image.png
+
+# Local agent and deployment state
+.codex-attachments/
+.openai/
+.agents/
+.env
+.env.*
+!.env.example
+
+# Dependencies and build products
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+dist/
+build/
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+*.tar.gz
+*.zip
+
+# Existing phone deployment is maintained separately, including its nested Git repo.
+/dashboard-with-guidelines/phone-site/
+/dashboard-with-guidelines/dashboard-with-guidelines/
+/dashboard-with-guidelines/build_phone.py
+
+# Regenerated test output
+verification/
+test-results/
+playwright-report/
+tests/range-watch-*/
+tests/range-debounce-*/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.lnk
+~$*
+.idea/
+.vscode/
+
+# Local documentation, comparison history and agent setup
+/docs/
+/comparison/
+/skills-lock.json
+/archive/*
+!/archive/README.md
+/dashboard-with-guidelines/dashboard-3/

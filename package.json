@@ -1,0 +1,16 @@
+{
+  "name": "carwow-range-dashboard-comparison",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Before and after comparison of design and content guidelines applied to an EV range dashboard",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "screenshots": "node scripts/capture-comparison.mjs",
+    "test": "node dashboard-without-guidelines/tests/analysis.test.mjs && node dashboard-with-guidelines/tests/analysis.test.mjs",
+    "test:before:frontend": "node dashboard-without-guidelines/tests/frontend.test.mjs",
+    "test:after:frontend": "node dashboard-with-guidelines/tests/frontend.test.mjs",
+    "test:after:browser": "node dashboard-with-guidelines/tests/browser.mjs",
+    "test:after:charts": "node dashboard-with-guidelines/tests/chart-browser.mjs"
+  },
+  "devDependencies": { "playwright": "1.65.0" }
+}

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#162d2b">
+  <title>EV Range Observatory</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23162d2b'/%3E%3Cpath d='M36 8L18 36h15l-5 20 20-31H33z' fill='%23c5f277'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="#overview"><span class="brand-icon">ϟ</span><span>RANGE<span class="brand-sub">OBSERVATORY / 03</span></span></a>
+    <div class="nav-label">THE TEST BENCH</div>
+    <nav aria-label="Dashboard sections">
+      <a href="#overview" data-page="overview"><span>◫</span> Overview</a>
+      <a href="#range" data-page="range"><span>▥</span> Range performance</a>
+      <a href="#reserve" data-page="reserve"><span>▤</span> Beyond zero</a>
+      <a href="#battery" data-page="battery"><span>⌁</span> Battery journeys</a>
+      <a href="#explore" data-page="explore"><span>⠿</span> Explore relationships</a>
+      <a href="#data" data-page="data"><span>▦</span> Test data</a>
+    </nav>
+    <div class="sidebar-note"><span class="tiny-label">REAL ROADS. REAL RANGE.</span><p>What happens when electric vehicles meet the highway.</p><div class="road-art"><i></i><i></i><i></i></div><span>Carwow range-test collection</span></div>
+    <a class="method-link" href="#method">ⓘ &nbsp; About the measurements</a>
+  </aside>
+  <div class="workspace">
+    <header class="topbar"><div class="breadcrumb">Carwow tests <span>/</span> <strong id="crumb">Overview</strong></div><div class="live"><i id="live-dot"></i><span id="live-status" role="status">Connecting to Excel</span></div></header>
+    <main>
+      <div class="page-heading"><div><div class="eyebrow">ELECTRIC VEHICLE RESEARCH</div><h1 id="page-title">The real-world range report.</h1><p id="page-description">Beyond the brochure. See how far these EVs really go.</p></div><button id="export" class="secondary">↓ &nbsp; Export data</button></div>
+      <section class="filters" aria-label="Filter EV tests"><label class="search"><span>⌕</span><input id="search" type="search" placeholder="Find a vehicle…" aria-label="Find a vehicle"></label><label><span class="sr-only">Manufacturer</span><select id="make"><option value="">All manufacturers</option></select></label><label><span class="sr-only">Test date</span><select id="date"><option value="">All test dates</option></select></label><button id="reset" class="text-button">Reset</button><span class="filter-count" id="filter-count"></span><div class="unit-toggle" role="group" aria-label="Distance unit"><button data-unit="mi" aria-pressed="true">mi</button><button data-unit="km" aria-pressed="false">km</button></div></section>
+      <div id="notice" role="alert" hidden></div>
+      <div id="content" aria-live="polite"><div class="loading"><div class="spinner"></div>Reading your workbook…</div></div>
+      <footer><span>Source: Data.xlsx <span id="saved"></span></span><span>Save in Excel. This dashboard follows automatically.</span></footer>
+    </main>
+  </div>
+  <div class="tooltip" id="tooltip" role="tooltip" hidden></div>
+  <script type="module" src="/app.mjs"></script>
+</body>
+</html>
