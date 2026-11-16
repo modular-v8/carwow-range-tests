@@ -1,5 +1,7 @@
 # Carwow EV range dashboards: before and after
 
+[Open the live dashboard](https://modular-v8.github.io/carwow-range-tests/) — available publicly through GitHub Pages.
+
 ## Combined comparison
 
 The comparison overlays both interactive dashboards at the same full width. Drag the vertical divider to reveal the original on the left and the improved design on the right. Vertical labels stay attached to the divider. There is no comparison toolbar or bottom slider. Focus the divider and use Left/Right arrows to adjust it; Home reveals the improved design and End reveals the original.
@@ -72,3 +74,5 @@ With the single server running, `npm run test:before:frontend` and `npm run test
 ## Data and attribution
 
 Measurements were compiled from Carwow range tests. This project is independent of Carwow. Tests span different dates and conditions. See [third-party notices](THIRD_PARTY_NOTICES.md) for guidance sources. The local `docs/` and `comparison/` folders are excluded from Git; the required slider template is maintained in `scripts/templates/comparison.html`. The workbook is never modified by the application. Generated builds, deployment metadata, dependencies, archive and research content stay outside version control as specified by `.gitignore`.
+
+The public comparison uses GoatCounter (`bhavyap.goatcounter.com`) for page-view analytics. Tracking loads once on the GitHub Pages domain; local previews and the two embedded dashboard views do not load separate trackers.

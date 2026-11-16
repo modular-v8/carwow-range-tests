@@ -1,6 +1,16 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Original and improved dashboards</title><style>
 *{box-sizing:border-box}html{overflow-y:scroll}body{margin:0;background:white;font:14px Arial,sans-serif}#stage{--split:50%;position:fixed;inset:0;overflow:hidden}iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:white}#before{clip-path:inset(0 calc(100% - var(--split)) 0 0);z-index:2}#after{clip-path:inset(0 0 0 var(--split));z-index:1}#divider{position:absolute;left:var(--split);top:0;bottom:0;width:24px;transform:translateX(-12px);z-index:5;border:0;padding:0;cursor:col-resize;touch-action:none;background:linear-gradient(to right,transparent 10px,#C8102E 10px,#C8102E 14px,transparent 14px)}#divider:focus-visible{outline:2px solid #003b8e;outline-offset:2px}.grip{position:absolute;left:-10px;top:calc(50% - 24px);width:44px;height:48px;display:grid;place-items:center;background:white;border:2px solid #C8102E;color:#111;font-size:22px}.label{position:absolute;top:50%;transform:translateY(-50%);writing-mode:vertical-rl;white-space:nowrap;background:#fff;color:#111;padding:16px 8px;font:14px/1.3 Arial,sans-serif;writing-mode:vertical-rl;pointer-events:none;border:1px solid #ddd}.original{right:38px;transform:translateY(-50%) rotate(180deg)}.improved{left:38px}.dragging iframe{pointer-events:none}.dragging{user-select:none}@media(max-height:500px){.label{font-size:12px;padding:8px 4px}}
-</style></head><body><main id="stage"><iframe id="before" title="Original AI-generated dashboard" scrolling="no"></iframe><iframe id="after" title="Improved dashboard" scrolling="no"></iframe><button id="divider" role="separator" aria-label="Reveal original or improved design. Use left and right arrows; Home and End reveal one design." aria-orientation="vertical" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><span class="label original">Original AI-generated design</span><span class="grip" aria-hidden="true">↔</span><span class="label improved">Improved design and content guidance</span></button></main>
+</style><script>
+// Count the public comparison once; embedded dashboards and local previews do not track.
+if (location.hostname === 'modular-v8.github.io') {
+  const analytics = document.createElement('script');
+  analytics.async = true;
+  analytics.src = 'https://gc.zgo.at/count.js';
+  analytics.dataset.goatcounter = 'https://bhavyap.goatcounter.com/count';
+  document.head.appendChild(analytics);
+}
+</script>
+</head><body><main id="stage"><iframe id="before" title="Original AI-generated dashboard" scrolling="no"></iframe><iframe id="after" title="Improved dashboard" scrolling="no"></iframe><button id="divider" role="separator" aria-label="Reveal original or improved design. Use left and right arrows; Home and End reveal one design." aria-orientation="vertical" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><span class="label original">Original AI-generated design</span><span class="grip" aria-hidden="true">↔</span><span class="label improved">Improved design and content guidance</span></button></main>
 <script>
 /* FRAME_DOCUMENTS */
 const stage=document.querySelector('#stage'),divider=document.querySelector('#divider'),frames=[document.querySelector('#before'),document.querySelector('#after')];let split=50,relaying=false,queued=false,currentPage='overview';
